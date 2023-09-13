@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smazat pojištění</title>
+</head>
+<body>
+    <h1>Smazat pojištění</h1>
+    <p>Opravdu chcete smazat toto pojištění?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Smazat</button>
+    </form>
+    <a href="{% url 'pojisteni_detail' pojisteni.pk %}">Zpět na detail</a>
+</body>
+</html>
