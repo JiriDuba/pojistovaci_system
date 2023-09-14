@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seznam pojištění</title>
+</head>
+<body>
+    <h1>Seznam pojištění</h1>
+    <ul>
+        {% for pojisteni in pojisteni %}
+            <li><a href="{% url 'pojisteni_detail' pojisteni.pk %}">{{ pojisteni }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_pojisteni' %}">Vytvořit nové pojištění</a>
+</body>
+</html>
